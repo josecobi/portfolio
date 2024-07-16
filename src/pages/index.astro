@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Badge from '../components/Badge.astro';
+import LinkedInIcon from '../icons/LinkedInIcon.astro';
+import GithubIcon from '../icons/GithubIcon.astro';
+import MailIcon from '../icons/MailIcon.astro';
+import SocialPill from '../icons/SocialPill.astro';
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Briefcase from "../icons/Briefcase.astro";
+
+---
+
+<Layout 
+title="Jose's Portfolio - Fultstack Software Engineer. 3+ Experience in the tech field."
+description="Explore Jose's portfolio showcasing his expertise in full-stack development, including web and mobile applications. Hire Jose for your next project and leverage his skills in JavaScript, React, Node.js, and more.">
+	<main>
+		
+		<SectionContainer class="py-44 pb-24">
+			<img class="rounded-full w-12 h-12 mb-4" src="/foto-intro.png" alt="portfolio-jose-foto"/>
+		<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10"><div class="flex justify-center items-center">Hi, I'm Jose Lopez Cobano <a href="https://linkedin.com/in/joselopezcobano" target="_blank" rel="noopener" class="flex justify-center items-center"><Badge>Available for hire</Badge></a></h1>
+		<h2 class="text-2xl"><span class="text-yellow-200"> Fullstack Software Engineer </span> based in Baltimore, MD (USA). 3+ years of experience in the tech field. <span class="opacity-75">Specialized in unique and responsive web applications.</span></h2>
+
+			<nav class="flex gap-x-4 mt-8">
+				<SocialPill href="https://linkedin.com/in/joselopezcobano"><LinkedInIcon class="w-6 h-6"/>
+					LinkedIn</SocialPill>
+				<SocialPill href="https://github.com/josecobi"><GithubIcon class="w-6 h-6"/>
+					Github</SocialPill>
+			<SocialPill href="https://github.com/josecobi"><MailIcon class="w-6 h-6"/>
+					jose.lopez.cobano@gmail.com</SocialPill>		
+			</nav>
+		</SectionContainer>
+		<SectionContainer id="experience">
+			<h2 class="text-2xl font-semibold mb-5 gap-x-3 items-center flex">
+				<Briefcase class="size-7"/>
+				Professional Experience</h2>
+			<Experience />
+		</SectionContainer>
+		
+	</main>
+</Layout>
+
