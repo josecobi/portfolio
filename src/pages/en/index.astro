@@ -1,0 +1,68 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Badge from './../en/Badge.astro';
+import LinkedInIcon from '../../icons/LinkedInIcon.astro';
+import GithubIcon from '../../icons/GithubIcon.astro';
+import MailIcon from '../../icons/MailIcon.astro';
+import SocialPill from '../../components/SocialPill.astro';
+import Experience from "./../en/Experience.astro";
+import SectionContainer from "../../components/SectionContainer.astro";
+import BriefcaseIcon from "../../icons/BriefcaseIcon.astro";
+import CodeIcon from "../../icons/CodeIcon.astro";
+import Projects from "./../en/Projects.astro"
+import AboutIcon from "../../icons/AboutIcon.astro"
+import About from "./../en/About.astro"
+import { getLangFromUrl } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+
+---
+
+<Layout 
+language={lang}
+title="Jose's Portfolio - Full-Stack Software Engineer. 3+ Experience in the tech field."
+description="Explore Jose's portfolio showcasing his expertise in full-stack development, including web applications. Hire Jose for your next project and leverage his skills in JavaScript, React, Node.js, and more.">
+
+
+
+	<main class="px-4 mt-40">
+		<SectionContainer class="pb-24" id="hi">
+			<div class="flex flex-row items-center gap-2 mb-4">
+	
+				<h1 class="text-black dark:text-white text-3xl md:text-4xl  font-bold flex flex-row pb-6 lg:pb-10">Hi, I'm Jose Lopez Cobano </h1>
+				<a href="https://linkedin.com/in/joselopezcobano" target="_blank" rel="noopener" class="flex justify-center items-center pb-6 lg:pb-10"><Badge >Available for hire</Badge></a>
+			</div>
+					
+				<h2 class="text-xl lg:text-2xl text-pretty max-w-[700px]"><span class="text-[#5973ff] dark:text-[#61feeb]"> Fullstack Software Engineer </span> based in Baltimore, MD (USA). 3+ years of experience in the tech field. <span class="opacity-85">Specialized in unique and responsive web applications.</span></h2>
+
+			<nav class="flex gap-4 mt-8 flex-wrap" id="contact">
+				<SocialPill href="https://linkedin.com/in/joselopezcobano"><LinkedInIcon class="size-4 md:size-6"/>
+					LinkedIn</SocialPill>
+				<SocialPill href="https://github.com/josecobi"><GithubIcon class="size-4 md:size-6"/>
+					Github</SocialPill>
+			<SocialPill href="mailto:jose.lopez.cobano@gmail.com"><MailIcon class="size-4 md:size-6"/>
+					jose.lopez.cobano@gmail.com</SocialPill>		
+			</nav>
+		</SectionContainer>
+		
+		<SectionContainer id="projects">
+			<h2 class="text-3xl font-semibold mb-5 gap-x-3 items-center flex">
+				<CodeIcon class="size-7"/>
+				Projects</h2>
+			<Projects />
+		</SectionContainer>
+		<SectionContainer id="experience">
+			<h2 class="text-3xl font-semibold mb-5 gap-x-3 items-center flex">
+				<BriefcaseIcon class="size-7"/>
+				Professional Experience</h2>
+			<Experience />
+		</SectionContainer>
+		<SectionContainer id="about">
+			<h2 class="text-3xl font-semibold mb-5 gap-x-3 items-center flex">
+				<AboutIcon class="size-7"/>
+				About me</h2>
+			<About />
+		</SectionContainer>
+	</main>
+</Layout>
+
